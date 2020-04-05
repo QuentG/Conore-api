@@ -1,0 +1,27 @@
+### Api Token
+api_refresh_api_token:
+  path: /token/refresh
+  controller: App\Controller\ApiTokenController::refresh
+
+api_revoke_api_token:
+  path: /token/revoke
+  controller: App\Controller\ApiTokenController::revoke
+
+### Security
+app_security_login:
+  path: /login
+  controller: App\Controller\SecurityController::login
+  methods: POST
+
+api_security_logout:
+  path: /logout
+
+api_security_register_customer:
+  path: /register/customer
+  controller: App\Controller\SecurityController::registerCustomer
+  methods: POST
+
+api_security_register_admin:
+  path: /register/admin
+  controller: App\Controller\SecurityController::registerAdmin
+  methods: POST

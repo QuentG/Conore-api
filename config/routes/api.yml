@@ -1,0 +1,19 @@
+### User
+include_user:
+  resource: resources/user.yml
+
+### Club
+include_club:
+  resource: resources/club.yml
+
+### Session
+include_session:
+  resource: resources/session.yml
+
+### Reservation
+include_reservation:
+  resource: resources/reservation.yml
+
+### Push Notification token
+include_push_notification_token:
+  resource: resources/push-notification-token.yml

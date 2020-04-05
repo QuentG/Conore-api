@@ -1,0 +1,14 @@
+api_retrieve_reservations_from_session:
+  path: /clubs/{id}/sessions/{sessionId}/reservations
+  controller: App\Controller\ReservationController::getSessionReservations
+  methods: GET
+
+api_create_reservation:
+  path: /clubs/{id}/sessions/{sessionId}/reservations
+  controller: App\Controller\ReservationController::createReservation
+  methods: POST
+
+api_delete_reservation:
+  path: /clubs/{id}/sessions/{sessionId}/reservations/{reservationId}
+  controller: App\Controller\ReservationController::removeReservation
+  methods: DELETE

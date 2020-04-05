@@ -1,0 +1,11 @@
+### Includes
+include_api_security:
+  resource: routes/api_security.yml
+  prefix: /security
+
+include_api:
+  resource: routes/api.yml
+
+include_api_stripe:
+  resource: routes/api_stripe.yml
+  prefix: /stripe

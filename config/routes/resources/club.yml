@@ -1,0 +1,44 @@
+api_retrieve_clubs:
+  path: /clubs
+  controller: App\Controller\ClubController::getClubs
+  methods: GET
+
+api_create_club:
+  path: /clubs
+  controller: App\Controller\ClubController::createClub
+  methods: POST
+
+api_retrieve_club:
+  path: /clubs/{id}
+  controller: App\Controller\ClubController::getClubById
+  methods: GET
+
+api_edit_club:
+  path: /clubs/{id}
+  controller: App\Controller\ClubController::editClub
+  methods: PUT
+
+api_delete_club:
+  path: /clubs/{id}
+  controller: App\Controller\ClubController::deleteClub
+  methods: DELETE
+
+api_get_members_club:
+  path: /clubs/{id}/users
+  controller: App\Controller\ClubController::getMembersClub
+  methods: GET
+
+api_add_member_club:
+  path: /clubs/{id}/users
+  controller: App\Controller\ClubController::addMember
+  methods: POST
+
+api_count_members_club:
+  path: /clubs/{id}/users/count
+  controller: App\Controller\ClubController::countMembersClub
+  methods: GET
+
+api_count_reservations:
+  path: /clubs/{id}/reservations/count
+  controller: App\Controller\ClubController::getNumberOfReservations
+  methods: GET

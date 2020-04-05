@@ -1,0 +1,24 @@
+api_retrieve_my_account:
+  path: /user
+  controller: App\Controller\UserController::getMyAccount
+  methods: GET
+
+api_retrieve_users:
+  path: /users
+  controller: App\Controller\UserController::getUsers
+  methods: GET
+
+api_retrieve_user_by_id:
+  path: /users/{id}
+  controller: App\Controller\UserController::getUserById
+  methods: GET
+
+api_edit_user:
+  path: /user
+  controller: App\Controller\UserController::editUser
+  methods: POST
+
+api_retrieve_user_clubs:
+  path: /users/{id}/clubs
+  controller: App\Controller\UserController::getUserClub
+  methods: GET

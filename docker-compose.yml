@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  conore-api-php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: php:7.4-apache
+    depends_on:
+      - conore-api-mysql
+    # Changement du répertoire courant
+    working_dir: /var/www/html/api
+    volumes:
+    - .:/var/www/html/api
+    # Définition du port sur lequel écouté, on le lie au port 8080 local "portchoisi:portapache"
+    ports:
+      - "8080:80"
+
+  conore-api-mysql:
+    image: mysql:5.7
+    command:
+      - "--default-authentication-plugin=mysql_native_password"
+      - "--lower_case_table_names=1"
+    environment:
+      - MYSQL_ROOT_PASSWORD=rootpass0
+      # Variables d'environnement pour se connect à la DB
+      - MYSQL_DATABASE=api_conore
+      - MYSQL_USER=conore
+      - MYSQL_PASSWORD=conore
+    ports:
+      - "3306:3306"

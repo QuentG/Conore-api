@@ -1,0 +1,41 @@
+security:
+    encoders:
+        App\Entity\User:
+            algorithm: auto
+
+    providers:
+        app_user_provider:
+            entity:
+                class: App\Entity\User
+                property: username
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        login:
+            anonymous: true
+            pattern: ^/security
+            guard:
+                authenticators:
+                    - App\Security\ApiAuthenticator
+            logout:
+                path: api_security_logout
+                handlers:
+                    - App\Security\LogoutPushNotificationTokenHandler
+                success_handler: App\Security\LogoutSuccessMessageHandler
+
+        api:
+            pattern: ^/
+            guard:
+                authenticators:
+                    - App\Security\ApiTokenAuthenticator
+
+        main:
+            anonymous: true
+
+    access_control:
+        - { path: ^/security/token/refresh, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/security/register, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/security/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/, roles: ROLE_USER }

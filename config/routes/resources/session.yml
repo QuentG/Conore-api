@@ -1,0 +1,24 @@
+api_retrieve_sessions_from_club:
+  path: /clubs/{id}/sessions
+  controller: App\Controller\SessionController::getClubSessions
+  methods: GET
+
+api_create_session:
+  path: /clubs/{id}/sessions
+  controller: App\Controller\SessionController::createSession
+  methods: POST
+
+api_retrieve_session_from_club:
+  path: /clubs/{id}/sessions/{sessionId}
+  controller: App\Controller\SessionController::getClubSession
+  methods: GET
+
+api_edit_session:
+  path: /clubs/{id}/sessions/{sessionId}
+  controller: App\Controller\SessionController::editSession
+  methods: PUT
+
+api_delete_session:
+  path: /clubs/{id}/sessions/{sessionId}
+  controller: App\Controller\SessionController::deleteClubSession
+  methods: DELETE

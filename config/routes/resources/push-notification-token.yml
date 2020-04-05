@@ -1,0 +1,4 @@
+api_insert_new_push_notification_token:
+  path: /push-notification-tokens
+  controller: App\Controller\PushNotificationController:new
+  methods: POST

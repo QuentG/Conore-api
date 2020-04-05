@@ -1,0 +1,34 @@
+api_get_stripe_client_id:
+  path: /client_id
+  controller: App\Controller\StripeController:getStripeClientId
+  methods: GET
+
+api_connect_to_stripe:
+  path: /connect/{id}
+  controller: App\Controller\StripeController:authenticate
+  methods: POST
+
+api_get_one_plan:
+  path: /{id}/plans/{name}
+  controller: App\Controller\StripeController:retrieveOnePlan
+  methods: GET
+
+api_get_all_plans:
+  path: /{id}/plans
+  controller: App\Controller\StripeController:retrieveAllPlans
+  methods: GET
+
+api_create_plan:
+  path: /{id}/plans
+  controller: App\Controller\StripeController:createProductPlan
+  methods: POST
+
+api_create_subscription:
+  path: /{id}/subscriptions
+  controller: App\Controller\StripeController:createSubscription
+  methods: POST
+
+api_get_balance:
+  path: /{id}/balance
+  controller: App\Controller\StripeController:getClubMoney
+  methods: GET

@@ -42,7 +42,7 @@ http://api.local.conore.com
 
 If you want to install one of the apps:
 
-- [Api](https://gitlab.com/conore/api)
+- [Api](https://github.com/QuentG/Conore-api/)
 
 If you need to open a bash on one of the containers:
 

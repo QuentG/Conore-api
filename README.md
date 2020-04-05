@@ -8,7 +8,7 @@
 
 ## Prerequisites
 
-Install the docker stack as defined in the [tools repository](https://gitlab.com/conore/api/-/tree/master/docker/README.md)
+Install the docker stack as defined in the [tools repository](https://github.com/QuentG/Conore-api/blob/master/docker/README.md)
 
 ## Install
 
